@@ -28,3 +28,7 @@ We suggest that you begin by typing:
   npm start
 
 Happy hacking!
+
+Cheatsheets HTML : https://www.codewithharry.com/blogpost/html-cheatsheet/#google_vignette
+Cheatsheets CSS : https://www.codewithharry.com/blogpost/css-cheatsheet/  
+Cheatsheets javaScript : https://www.codewithharry.com/blogpost/javascript-cheatsheet/
