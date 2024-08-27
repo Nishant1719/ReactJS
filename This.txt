@@ -1,7 +1,7 @@
 Google search : reactjs.org (official)
 Create React app 
 packages for basic snippet and stucture of the app (Commands): 
-    ~npx create-react-app my-app  (This is for if we want to use the package for only single use).
+    ~npx create-react-app my-app (use . instead of name of the application for current folder)(This is for if we want to use the package for only single use).
     ~cd my-app 
     ~npm start
 
