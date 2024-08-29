@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 // Adding Props 
 
 export default function Navbar(props) {
@@ -16,7 +16,7 @@ export default function Navbar(props) {
             <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">About</a>
+            <a className="nav-link" href="/">{props.aboutText}</a>
           </li>
 
           {/* Dropdown 
@@ -48,3 +48,19 @@ export default function Navbar(props) {
     </nav>
   )
 }
+
+// This is how you restrict the type of the props values.
+Navbar.propTypes = {
+  tittle : PropTypes.string.isRequired,
+  aboutText : PropTypes.string
+};
+
+// This is how you set Default values for Props
+Navbar.defaultProps = {
+  tittle : 'Set the Title',
+  aboutText : 'About Text Here'
+};
+
+// If we use .isRequired on any of the props (ex. tittles) 
+// And we did not used default props 
+// It will throw an errror quoting tittle is required in the ui 

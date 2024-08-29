@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 
 
+
 //let name = "Nishant";
 //any external javascript is comming from outside in the app function it will sanitize it means removes it.
 //Example :
@@ -102,9 +103,18 @@ function App() {
     </nav> */}
       
     {/* Adding navbar from the components and adding props */}
-    <Navbar tittle = 'TextUtils'/>
+    <Navbar tittle = 'TextUtils' aboutText = 'About us'/>
+
+    {/* Default props examples
+    <Navbar/>
+    */}
+
+    
     </>
   );
 }
+
+
+
 
 export default App;
