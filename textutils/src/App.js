@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 
-let name = "Nishant";
+//let name = "Nishant";
 //any external javascript is comming from outside in the app function it will sanitize it means removes it.
 //Example :
-let name1 = "<b>Shreya</b>";
+//let name1 = "<b>Shreya</b>";
 //Reason Babel compiles JSX down to React.createElement() calls.
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
         </a>
       </header>
     </div> */}
+    {/*
     <nav>
       <li>Home</li>
       <li>About</li>
@@ -39,13 +40,64 @@ function App() {
     </nav>
     <div className="container">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis odio possimus non modi delectus eaque ratione explicabo illo, voluptatem vel impedit maiores ipsa fugit quas magnam rem odit tenetur autem dolorem veritatis aliquam voluptate.</p>
-      {/* This is how you can add images (source of logo is present at the top) */}
+      {/* This is how you can add images (source of logo is present at the top) 
       <img src={logo} className="App-logo" alt="logo" /> 
 
-      {/* This is how you can add Variables (source of logo is present at the top) */}
+      {/* This is how you can add Variables (source of logo is present at the top) 
       <h1>Hello {name}</h1>
       <h2>Heyy {name1}</h2>
     </div>
+    */}
+
+    {/* Bootstrap implementations :
+    Incase of Error : 
+      - Close all the tags that are remain open
+      - replace class to className (Use Control F to find all and replace)
+      
+    */}
+
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="/">TextUtils</a>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/">About</a>
+          </li>
+
+          {/* Dropdown 
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" href="/">Action</a></li>
+              <li><a className="dropdown-item" href="/">Another action</a></li>
+              <li><hr className="dropdown-divider" /></li>
+              <li><a className="dropdown-item" href="/">Something else here</a></li>
+            </ul>
+          </li> */}
+          
+
+          {/* Disabled anchor
+          <li className="nav-item">
+            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li> */}
+          
+        </ul>
+        <form className="d-flex" role="search">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
     </>
   );
 }
