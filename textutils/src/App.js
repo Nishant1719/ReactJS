@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
 
 
 //let name = "Nishant";
@@ -55,7 +56,8 @@ function App() {
       - replace class to className (Use Control F to find all and replace)
       
     */}
-
+    {/* Shifting this navbar to components folder for applicing function based components */}
+    {/* 
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
       <a className="navbar-brand" href="/">TextUtils</a>
@@ -88,16 +90,19 @@ function App() {
           {/* Disabled anchor
           <li className="nav-item">
             <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li> */}
+          </li> *
           
         </ul>
         <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit">Search</button>
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
-  </nav>
+    </nav> */}
+      
+    {/* Adding navbar from the components and adding props */}
+    <Navbar tittle = 'TextUtils'/>
     </>
   );
 }
