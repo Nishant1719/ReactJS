@@ -56,10 +56,10 @@ Navbar.propTypes = {
 };
 
 // This is how you set Default values for Props
-Navbar.defaultProps = {
-  tittle : 'Set the Title',
-  aboutText : 'About Text Here'
-};
+// Navbar.defaultProps = {
+//   tittle : 'Set the Title',
+//   aboutText : 'About Text Here'
+// };
 
 // If we use .isRequired on any of the props (ex. tittles) 
 // And we did not used default props 
