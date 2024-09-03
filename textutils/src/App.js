@@ -1,8 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-
-
+import TextForm from './components/TextForm';
 
 //let name = "Nishant";
 //any external javascript is comming from outside in the app function it will sanitize it means removes it.
@@ -108,8 +107,11 @@ function App() {
     {/* Default props examples
     <Navbar/>
     */}
-
-    
+    {/* <TextForm/> */}
+    {/* Using the same thing with container class of Bootstrap */}
+      <div className="container my-4" >
+        <TextForm heading = "Enter the text" subHeading = "Example: About you"/>
+      </div>
     </>
   );
 }
