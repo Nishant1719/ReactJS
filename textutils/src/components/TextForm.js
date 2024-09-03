@@ -5,7 +5,7 @@ import React, {useState} from 'react'
 
 
 export default function TextForm(props) {
-    const [text, setText] = useState('Enter Text Here');
+    const [text, setText] = useState('');
     // Updating text variable :
     // text = "New text"; //Wrong way
     // setText("New Text"); //Right way
@@ -13,19 +13,37 @@ export default function TextForm(props) {
         let newText = text.toUpperCase();
         setText(newText);
     }
+    const handleLoClick = () => {
+        let newText = text.toLowerCase();
+        setText(newText);
+    }
     const handleOnChange = (event) => {
         setText(event.target.value);
     }
     
   return (
-    <div>
-        <h2>{props.heading}</h2>
-        <div className="mb-3">
-            <label htmlFor="MyBox" className="form-label">{props.subHeading}</label>
-            <textarea className="form-control" id="MyBox" rows="8" value={text} onChange={handleOnChange}></textarea>
+    <>
+        <div className="container">
+            <h2>{props.heading}</h2>
+            <div className="mb-4">
+                <label htmlFor="MyBox" className="form-label">{props.subHeading}</label>
+                <textarea className="form-control" id="MyBox" rows="8" value={text} onChange={handleOnChange}></textarea>
+            </div>
+            <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
+            <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-    </div>
+        <div className="container my-4">
+            <h3>Text Analysis</h3>
+            <p>Number of word : {text.split(" ").length}</p>
+            <p>Number of Characters : {text.length}</p>
+            <p>Time to read {0.008 * text.split(" ").length}</p>
+        </div>
+        <div className="container my-2">
+            <h3>Preview</h3>
+            <p>{text}</p>
+        </div>
+        
+    </>
   )
 }
 
