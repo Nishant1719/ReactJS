@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 
 
-
-
-
 export default function TextForm(props) {
     const [text, setText] = useState('');
     // Updating text variable :
@@ -16,6 +13,9 @@ export default function TextForm(props) {
     const handleLoClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+    }
+    const handleClearClick = () => {
+        setText("");
     }
     const handleOnChange = (event) => {
         setText(event.target.value);
@@ -31,6 +31,7 @@ export default function TextForm(props) {
             </div>
             <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
             <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
+            <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
         </div>
         <div className="container my-4">
             <h3>Text Analysis</h3>
