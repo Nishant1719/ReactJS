@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 
@@ -111,6 +112,10 @@ function App() {
     {/* Using the same thing with container class of Bootstrap */}
       <div className="container my-4" >
         <TextForm heading = "Enter the text" subHeading = "Example: About you"/>
+      </div>
+      
+      <div className="container my-3">
+        <About/>
       </div>
     </>
   );
