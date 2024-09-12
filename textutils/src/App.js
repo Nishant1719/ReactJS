@@ -3,6 +3,8 @@ import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import React, { useState } from 'react'
+
 
 //let name = "Nishant";
 //any external javascript is comming from outside in the app function it will sanitize it means removes it.
@@ -11,6 +13,18 @@ import TextForm from './components/TextForm';
 //Reason Babel compiles JSX down to React.createElement() calls.
 
 function App() {
+
+  const [mode,setMode] = useState('light');
+
+  const toggleMode = ()=>{
+    if(mode === 'light' ){
+      setMode('dark');
+    }else{
+      setMode('light');
+    }
+
+  };
+
   return ( // entire code in the block is called JSX its 95% HTML : //JS is written in Curly brackets
     //It should always return only one element like in this case div className = app
     //But if there is a senario where you have to send to elements like <h1>Headings</h1>.
@@ -101,9 +115,9 @@ function App() {
       </div>
     </div>
     </nav> */}
-      
+    
     {/* Adding navbar from the components and adding props */}
-    <Navbar tittle = 'TextUtils' aboutText = 'About us'/>
+    <Navbar tittle = 'TextUtils' aboutText = 'About us' mode = {mode} toggleMode = {toggleMode}/>
 
     {/* Default props examples
     <Navbar/>
