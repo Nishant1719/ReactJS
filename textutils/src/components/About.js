@@ -34,7 +34,7 @@ export default function About() {
     <>
     <div className="container" style={myStyle}>
       <h2 className='my-2'>About Us</h2>
-        <div className="accordion" id="accordionExample" style={myStyle}>
+        <div className="accordion my-3" id="accordionExample" style={myStyle}>
           <div className="accordion-item" >
             <h2 className="accordion-header">
               <button className="accordion-button" type="button" style={myStyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -74,7 +74,7 @@ export default function About() {
       </div>
     </div>
     <div className="container">
-        <button className="btn btn-primary my-3" onClick={handleDarkBtn}>{myBtnText}</button>
+        <button className="btn btn-primary my-1" onClick={handleDarkBtn}>{myBtnText}</button>
     </div>
     </>
   )
